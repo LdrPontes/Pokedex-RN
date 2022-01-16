@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     height: 60,
-    lineHeight: 19,
     paddingLeft: 12,
     fontSize: FontSize.FONT_SIZE_16,
     fontWeight: FontWeight.FONT_WEIGHT_NORMAL,
