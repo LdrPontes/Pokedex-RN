@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Text, TouchableOpacity } from 'react-native';
+
 import {
   BackgroundColors,
   FontSize,
@@ -8,6 +7,7 @@ import {
   TypeColors,
   Typography,
 } from '_constants';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 export enum ButtonType {
   PRIMARY,
