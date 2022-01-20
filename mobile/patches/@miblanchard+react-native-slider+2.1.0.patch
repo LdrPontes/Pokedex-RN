@@ -1,0 +1,26 @@
+diff --git a/node_modules/@miblanchard/react-native-slider/lib/index.js b/node_modules/@miblanchard/react-native-slider/lib/index.js
+index 074bd84..1891e7b 100644
+--- a/node_modules/@miblanchard/react-native-slider/lib/index.js
++++ b/node_modules/@miblanchard/react-native-slider/lib/index.js
+@@ -497,7 +497,7 @@ export class Slider extends PureComponent {
+                             ...valueVisibleStyle,
+                         },
+                     ], onLayout: this._measureThumb }, renderThumbComponent
+-                    ? renderThumbComponent()
++                    ? renderThumbComponent(i)
+                     : this._renderThumbImage(i)))),
+                 React.createElement(View, { style: [styles.touchArea, touchOverflowStyle], ...this._panResponder.panHandlers }, !!debugTouchArea &&
+                     interpolatedThumbValues.map((value, i) => this._renderDebugThumbTouchRect(value, i))))));
+diff --git a/node_modules/@miblanchard/react-native-slider/lib/types.d.ts b/node_modules/@miblanchard/react-native-slider/lib/types.d.ts
+index 2426bbd..76cfa8b 100644
+--- a/node_modules/@miblanchard/react-native-slider/lib/types.d.ts
++++ b/node_modules/@miblanchard/react-native-slider/lib/types.d.ts
+@@ -26,7 +26,7 @@ export declare type SliderProps = {
+     onSlidingStart?: SliderOnChangeCallback;
+     onValueChange?: SliderOnChangeCallback;
+     renderAboveThumbComponent?: (index: number) => React.ReactNode;
+-    renderThumbComponent?: () => React.ReactNode;
++    renderThumbComponent?: (index: number) => React.ReactNode;
+     renderTrackMarkComponent?: (index: number) => React.ReactNode;
+     step?: number;
+     thumbImage?: ImageSourcePropType;

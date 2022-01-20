@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { ButtonType, PDXButton } from '_atoms/Button';
 import { PDXSearchField } from '_atoms/SearchField';
+import { PDXSlider } from '_atoms/Slider';
 import { BackgroundColors } from '_constants';
 
 const SignInScreen = () => {
@@ -16,6 +17,11 @@ const SignInScreen = () => {
         label="PRESS ME"
         type={ButtonType.PRIMARY}
         onPress={() => console.log('Pressed')}
+      />
+      <PDXSlider
+        min={1}
+        max={898}
+        onValueChange={value => console.log(value)}
       />
     </View>
   );

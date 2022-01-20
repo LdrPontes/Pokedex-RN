@@ -20,6 +20,7 @@ module.exports = {
           _atoms: './src/components/atoms',
           _constants: './src/constants',
           _assets: './assets',
+          _utils: './src/utils',
         },
       },
     ],
