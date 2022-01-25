@@ -1,5 +1,5 @@
 import React from 'react';
-import SignInScreen from './screens/SignIn';
+import SignInScreen from './screens/Home';
 
 function AuthNavigator(Stack: any) {
   return (

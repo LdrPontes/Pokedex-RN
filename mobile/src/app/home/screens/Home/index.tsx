@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { ButtonType, PDXButton } from '_atoms/Button';
 import { PDXSearchField } from '_atoms/SearchField';
 import { PDXSlider } from '_atoms/Slider';
+import Text from '_atoms/Text';
 import { BackgroundColors } from '_constants';
 
 const SignInScreen = () => {
@@ -23,6 +24,12 @@ const SignInScreen = () => {
         max={898}
         onValueChange={value => console.log(value)}
       />
+      <Text type={'appTitle'}>Application Title</Text>
+      <Text type={'pokemonName'}>Pokemon Name</Text>
+      <Text type={'filterTitle'}>Filter Title</Text>
+      <Text type={'description'}>Description</Text>
+      <Text type={'pokemonNumber'}>Pokemon Number</Text>
+      <Text type={'pokemonType'}>Pokemon Type</Text>
     </View>
   );
 };
