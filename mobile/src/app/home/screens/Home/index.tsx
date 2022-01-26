@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { ButtonType, PDXButton } from '_atoms/Button';
 import { PDXSearchField } from '_atoms/SearchField';
+import SelectableIcon, { SelectableIconType } from '_atoms/SelectableIcon';
 import { PDXSlider } from '_atoms/Slider';
 import Text from '_atoms/Text';
 import { BackgroundColors } from '_constants';
@@ -30,6 +31,10 @@ const SignInScreen = () => {
       <Text type={'description'}>Description</Text>
       <Text type={'pokemonNumber'}>Pokemon Number</Text>
       <Text type={'pokemonType'}>Pokemon Type</Text>
+      <SelectableIcon
+        type={SelectableIconType.PSYCHIC}
+        onChange={value => console.log(value)}
+      />
     </View>
   );
 };
