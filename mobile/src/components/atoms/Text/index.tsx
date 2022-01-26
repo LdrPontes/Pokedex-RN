@@ -10,12 +10,15 @@ type Props = {
     | 'pokemonName'
     | 'pokemonNumber'
     | 'pokemonType';
+  color?: string;
 };
 
-const Text: React.FC<Props> = React.memo(({ type, children }) => {
+const Text: React.FC<Props> = React.memo(({ type, color, children }) => {
   let style = styles[type];
 
-  return <RNText style={style}>{children}</RNText>;
+  return (
+    <RNText style={{ ...style, color: color ?? undefined }}>{children}</RNText>
+  );
 });
 
 const styles = StyleSheet.create({
