@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { ButtonType, PDXButton } from '_atoms/Button';
+import Icon from '_atoms/Icon';
 import { PDXSearchField } from '_atoms/SearchField';
 import SelectableIcon, { SelectableIconType } from '_atoms/SelectableIcon';
 import { PDXSlider } from '_atoms/Slider';
 import Text from '_atoms/Text';
 import { BackgroundColors } from '_constants';
+import Filter from '_assets/icons/filter.svg';
 
 const SignInScreen = () => {
   return (
@@ -35,6 +37,9 @@ const SignInScreen = () => {
         type={SelectableIconType.PSYCHIC}
         onChange={value => console.log(value)}
       />
+      <Icon onPress={() => console.log('Pressed')}>
+        <Filter fill={'#000000'} />
+      </Icon>
     </View>
   );
 };
