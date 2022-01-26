@@ -12,11 +12,11 @@ type Props = {
     | 'pokemonType';
 };
 
-const Text: React.FC<Props> = ({ type, children }) => {
+const Text: React.FC<Props> = React.memo(({ type, children }) => {
   let style = styles[type];
 
   return <RNText style={style}>{children}</RNText>;
-};
+});
 
 const styles = StyleSheet.create({
   appTitle: {
