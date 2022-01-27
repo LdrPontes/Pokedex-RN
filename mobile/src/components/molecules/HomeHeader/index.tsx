@@ -1,17 +1,18 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Icon from '_atoms/Icon';
 import Generation from '_assets/icons/generation.svg';
 import Sort from '_assets/icons/sort.svg';
 import Filter from '_assets/icons/filter.svg';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Text from '_atoms/Text';
 import { TextColors } from '_constants';
-import { PDXSearchField } from '_atoms/SearchField';
+import PokeballHeader from '_assets/patterns/pokeball-header.svg';
+import { WINDOW_WIDTH } from '_utils/dimensions';
+import { Icon, SearchField, Text } from '_atoms';
 
 const HomeHeader: React.FC = () => {
   return (
     <View style={styles.container}>
+      <PokeballHeader style={styles.pokeball} width={WINDOW_WIDTH} />
       <SafeAreaView style={styles.iconsContainer}>
         <Icon onPress={() => console.log('Pressed')}>
           <Generation fill={'#000000'} />
@@ -30,7 +31,7 @@ const HomeHeader: React.FC = () => {
         <Text type="description" color={TextColors.GREY}>
           {'Search for Pokémon by name or using the National Pokédex number.'}
         </Text>
-        <PDXSearchField
+        <SearchField
           placeholder={'What Pokémon are you looking for?'}
           onChange={value => console.log(value)}
           style={styles.searchField}
@@ -49,11 +50,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   title: {
-    marginTop: 38,
     marginBottom: 16,
   },
   searchField: {
     marginVertical: 24,
+  },
+  pokeball: {
+    position: 'absolute',
   },
 });
 
