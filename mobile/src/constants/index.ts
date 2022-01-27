@@ -1,3 +1,4 @@
+export { PokemonTypes } from './pokemon_types';
 export {
   TypeColors,
   TextColors,
