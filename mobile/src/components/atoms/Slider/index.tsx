@@ -11,7 +11,7 @@ type Props = {
   max: number;
 };
 
-export const PDXSlider: React.FC<Props> = ({ onValueChange, min, max }) => {
+const PDXSlider: React.FC<Props> = ({ onValueChange, min, max }) => {
   const [currentValue, setValue] = useState<number | number[]>([min, max]);
 
   const thumbLabel = (index: number) => {
@@ -63,3 +63,5 @@ const styles = StyleSheet.create({
     paddingTop: 8,
   },
 });
+
+export default PDXSlider;

@@ -18,7 +18,7 @@ type Props = {
   style?: {};
 };
 
-export const PDXSearchField: React.FC<Props> = ({
+const PDXSearchField: React.FC<Props> = ({
   initial,
   placeholder,
   onChange,
@@ -78,3 +78,5 @@ const styles = StyleSheet.create({
     fontFamily: Typography.FONT_FAMILY_REGULAR,
   },
 });
+
+export default PDXSearchField;

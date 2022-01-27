@@ -20,7 +20,7 @@ type Props = {
   onPress: () => void;
 };
 
-export const PDXButton: React.FC<Props> = ({ type, label, onPress }) => {
+const PDXButton: React.FC<Props> = ({ type, label, onPress }) => {
   const buttonStyle = {
     ...styles.button,
     ...{
@@ -59,3 +59,5 @@ const styles = StyleSheet.create({
     fontFamily: Typography.FONT_FAMILY_REGULAR,
   },
 });
+
+export default PDXButton;
