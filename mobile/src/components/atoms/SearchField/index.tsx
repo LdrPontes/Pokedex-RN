@@ -15,12 +15,14 @@ type Props = {
   initial?: string;
   placeholder: string;
   onChange: (value: string) => void;
+  style?: {};
 };
 
 export const PDXSearchField: React.FC<Props> = ({
   initial,
   placeholder,
   onChange,
+  style,
 }) => {
   const [isFocused, setFocus] = useState(false);
 
@@ -38,7 +40,7 @@ export const PDXSearchField: React.FC<Props> = ({
   };
 
   return (
-    <View style={containerStyle}>
+    <View style={{ ...style, ...containerStyle }}>
       <Search fill={TextColors.GREY} />
       <TextInput
         style={styles.textInput}
