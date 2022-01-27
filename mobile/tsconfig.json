@@ -48,6 +48,9 @@
       "_atoms/*": [
         "./src/components/atoms/*",
       ],
+      "_molecules/*": [
+        "./src/components/molecules/*",
+      ],
       "_assets": ["./assets"],
       "_assets/*": ["./assets/*"],
       "_utils": ["./src/utils"],

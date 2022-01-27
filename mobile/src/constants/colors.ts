@@ -42,7 +42,7 @@ export enum BackgroundTypeColors {
 
 export enum BackgroundColors {
   WHITE = '#FFFFFF',
-  DEFAULT_INPUT = '#F2F2F2',
+  DEFAULT_INPUT = '#ECECEC',
   PRESSED_INPUT = '#E2E2E2',
   MODAL = 'rgba(0, 0, 0, 0.25)',
 }
