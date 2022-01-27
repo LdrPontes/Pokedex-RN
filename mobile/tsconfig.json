@@ -48,8 +48,14 @@
       "_atoms/*": [
         "./src/components/atoms/*",
       ],
+      "_atoms": [
+        "./src/components/atoms",
+      ],
       "_molecules/*": [
         "./src/components/molecules/*",
+      ],
+      "_molecules": [
+        "./src/components/molecules",
       ],
       "_assets": ["./assets"],
       "_assets/*": ["./assets/*"],
